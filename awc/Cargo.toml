@@ -53,31 +53,31 @@ trust-dns = ["trust-dns-resolver"]
 __compress = []
 
 [dependencies]
-# actix-codec = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
-# actix-service = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-codec = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-service = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
 actix-http = { path = "../actix-http" }
-# actix-rt = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork", default-features = false }
+actix-rt = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork", default-features = false }
 actix-tls = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork", features = ["connect"] }
-# actix-utils = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-utils = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
 
-# ahash = "0.7"
-# base64 = "0.13"
-# bytes = "1"
-# cfg-if = "1"
-# derive_more = "0.99.5"
-# futures-core = { version = "0.3.7", default-features = false }
-# futures-util = { version = "0.3.7", default-features = false }
-# h2 = "0.3"
-# http = "0.2"
-# itoa = "0.4"
-# log =" 0.4"
-# mime = "0.3"
-# percent-encoding = "2.1"
-# pin-project-lite = "0.2"
-# rand = "0.8"
-# serde = "1.0"
-# serde_json = "1.0"
-# serde_urlencoded = "0.7"
+ahash = "0.7"
+base64 = "0.13"
+bytes = "1"
+cfg-if = "1"
+derive_more = "0.99.5"
+futures-core = { version = "0.3.7", default-features = false }
+futures-util = { version = "0.3.7", default-features = false }
+h2 = "0.3"
+http = "0.2"
+itoa = "0.4"
+log =" 0.4"
+mime = "0.3"
+percent-encoding = "2.1"
+pin-project-lite = "0.2"
+rand = "0.8"
+serde = "1.0"
+serde_json = "1.0"
+serde_urlencoded = "0.7"
 tokio = { version = "1", features = ["sync"] }
 
 cookie = { version = "0.15", features = ["percent-encode"], optional = true }

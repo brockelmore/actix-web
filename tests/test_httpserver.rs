@@ -61,7 +61,7 @@ async fn test_start() {
     }
 
     // stop
-    let _ = srv.stop(false);
+    let _ = srv.handle().stop(false);
 
     thread::sleep(Duration::from_millis(100));
     let _ = sys.stop();
