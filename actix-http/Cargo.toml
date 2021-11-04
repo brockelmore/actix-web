@@ -42,10 +42,10 @@ compress-zstd = ["zstd", "__compress"]
 __compress = []
 
 [dependencies]
-actix-service = "2.0.0"
-actix-codec = { git = "https://github.com/brockelmore/actix-net" }
-actix-utils = "3.0.0"
-actix-rt = "2.2"
+actix-service = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-codec = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-utils = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-rt = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
 
 ahash = "0.7"
 base64 = "0.13"
@@ -74,7 +74,7 @@ smallvec = "1.6.1"
 tokio = { version = "1.2", features = ["sync"] }
 
 # tls
-actix-tls = { version = "3.0.0-beta.7", default-features = false, optional = true }
+actix-tls = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork", default-features = false, optional = true }
 
 # compression
 brotli2 = { version="0.3.2", optional = true }
@@ -82,9 +82,9 @@ flate2 = { version = "1.0.13", optional = true }
 zstd = { version = "0.7", optional = true }
 
 [dev-dependencies]
-actix-server = "2.0.0-beta.3"
-actix-http-test = { version = "3.0.0-beta.5", features = ["openssl"] }
-actix-tls = { version = "3.0.0-beta.7", features = ["openssl"] }
+actix-server = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-http-test = { path = "../actix-http-test", features = ["openssl"] }
+actix-tls = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork", features = ["openssl"] }
 async-stream = "0.3"
 criterion = { version = "0.3", features = ["html_reports"] }
 env_logger = "0.8"

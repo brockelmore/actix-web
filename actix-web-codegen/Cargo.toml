@@ -18,14 +18,14 @@ proc-macro = true
 quote = "1"
 syn = { version = "1", features = ["full", "parsing"] }
 proc-macro2 = "1"
-actix-router = "0.5.0-beta.2"
+actix-router = { path = "../actix-router" }
 
 [dev-dependencies]
-actix-rt = "2.2"
-actix-macros = "0.2.3"
-actix-test = "0.1.0-beta.5"
-actix-utils = "3.0.0"
-actix-web = "4.0.0-beta.10"
+actix-rt = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-macros = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-test = { path = "../actix-test" }
+actix-utils = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-web = { path = "../" }
 
 futures-core = { version = "0.3.7", default-features = false, features = ["alloc"] }
 trybuild = "1"

@@ -53,31 +53,31 @@ trust-dns = ["trust-dns-resolver"]
 __compress = []
 
 [dependencies]
-actix-codec = { git = "https://github.com/brockelmore/actix-net" }
-actix-service = "2.0.0"
-actix-http = "3.0.0-beta.11"
-actix-rt = { version = "2.1", default-features = false }
-actix-tls = { version = "3.0.0-beta.7", features = ["connect"] }
-actix-utils = "3.0.0"
+# actix-codec = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+# actix-service = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-http = { path = "../actix-http" }
+# actix-rt = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork", default-features = false }
+actix-tls = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork", features = ["connect"] }
+# actix-utils = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
 
-ahash = "0.7"
-base64 = "0.13"
-bytes = "1"
-cfg-if = "1"
-derive_more = "0.99.5"
-futures-core = { version = "0.3.7", default-features = false }
-futures-util = { version = "0.3.7", default-features = false }
-h2 = "0.3"
-http = "0.2"
-itoa = "0.4"
-log =" 0.4"
-mime = "0.3"
-percent-encoding = "2.1"
-pin-project-lite = "0.2"
-rand = "0.8"
-serde = "1.0"
-serde_json = "1.0"
-serde_urlencoded = "0.7"
+# ahash = "0.7"
+# base64 = "0.13"
+# bytes = "1"
+# cfg-if = "1"
+# derive_more = "0.99.5"
+# futures-core = { version = "0.3.7", default-features = false }
+# futures-util = { version = "0.3.7", default-features = false }
+# h2 = "0.3"
+# http = "0.2"
+# itoa = "0.4"
+# log =" 0.4"
+# mime = "0.3"
+# percent-encoding = "2.1"
+# pin-project-lite = "0.2"
+# rand = "0.8"
+# serde = "1.0"
+# serde_json = "1.0"
+# serde_urlencoded = "0.7"
 tokio = { version = "1", features = ["sync"] }
 
 cookie = { version = "0.15", features = ["percent-encode"], optional = true }
@@ -88,13 +88,13 @@ tls-rustls = { package = "rustls", version = "0.20.0", optional = true, features
 trust-dns-resolver = { version = "0.20.0", optional = true }
 
 [dev-dependencies]
-actix-web = { version = "4.0.0-beta.10", features = ["openssl"] }
-actix-http = { version = "3.0.0-beta.11", features = ["openssl"] }
-actix-http-test = { version = "3.0.0-beta.5", features = ["openssl"] }
-actix-utils = "3.0.0"
-actix-server = "2.0.0-beta.3"
-actix-tls = { version = "3.0.0-beta.7", features = ["openssl", "rustls"] }
-actix-test = { version = "0.1.0-beta.5", features = ["openssl", "rustls"] }
+# actix-web = { path = "../", features = ["openssl"] }
+# actix-http = { path = "../actix-http", features = ["openssl"] }
+# actix-http-test = { path = "../actix-http-test", features = ["openssl"] }
+# actix-utils = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+# actix-server = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+# actix-tls = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork", features = ["openssl", "rustls"] }
+# actix-test = { path = "../actix-test", features = ["openssl", "rustls"] }
 
 brotli2 = "0.3.2"
 env_logger = "0.8"

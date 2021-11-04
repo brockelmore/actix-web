@@ -29,13 +29,13 @@ default = []
 openssl = ["tls-openssl", "awc/openssl"]
 
 [dependencies]
-actix-service = "2.0.0"
-actix-codec = { git = "https://github.com/brockelmore/actix-net" }
-actix-tls = "3.0.0-beta.7"
-actix-utils = "3.0.0"
-actix-rt = "2.2"
-actix-server = "2.0.0-beta.3"
-awc = { version = "3.0.0-beta.9", default-features = false }
+actix-service = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-codec = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-tls = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-utils = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-rt = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-server = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+awc = { path = "../awc", default-features = false }
 
 base64 = "0.13"
 bytes = "1"
@@ -50,5 +50,5 @@ serde_urlencoded = "0.7"
 tls-openssl = { version = "0.10.9", package = "openssl", optional = true }
 
 [dev-dependencies]
-actix-web = { version = "4.0.0-beta.10", default-features = false, features = ["cookies"] }
-actix-http = "3.0.0-beta.11"
+actix-web = { path = "../", default-features = false, features = ["cookies"] }
+actix-http = { path = "../actix-http" }

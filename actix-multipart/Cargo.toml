@@ -14,8 +14,8 @@ name = "actix_multipart"
 path = "src/lib.rs"
 
 [dependencies]
-actix-web = { version = "4.0.0-beta.10", default-features = false }
-actix-utils = "3.0.0"
+actix-web = { path = "../", default-features = false }
+actix-utils = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
 
 bytes = "1"
 derive_more = "0.99.5"
@@ -28,7 +28,7 @@ mime = "0.3"
 twoway = "0.2"
 
 [dev-dependencies]
-actix-rt = "2.2"
-actix-http = "3.0.0-beta.11"
+actix-rt = { git = "https://github.com/brockelmore/actix-net", branch = "brock/full_fork" }
+actix-http = { path = "../actix-http" }
 tokio = { version = "1", features = ["sync"] }
 tokio-stream = "0.1"
